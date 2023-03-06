@@ -12,6 +12,8 @@
   --customers-border-color: #8e8f99;
   --svg-icon-color: #afb1b8;
   --background-color-modal: rgba(46, 47, 66, 0.4);
+
+  --timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h1,
@@ -62,6 +64,33 @@ body {
   padding-top: 24px;
   padding-bottom: 24px;
   display: block;
+  position: relative;
+  color: var(--primary-text-color);
+}
+
+.current.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  color: var(--accent-color);
+  background-color: var(--filtr-btn-color);
+  transition: background-color var(--timing-function);
+}
+
+.current.nav-link {
+  color: var(--accent-color);
+}
+
+.address-link {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  display: block;
+  position: relative;
 }
 
 .header-conteniner {
@@ -96,7 +125,7 @@ body {
   letter-spacing: 0.03em;
   text-decoration: none;
   text-transform: uppercase;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--timing-function);
 }
 
 .menu-item:not(:last-child) {
@@ -138,14 +167,12 @@ body {
 }
 
 .site-nav .link {
-  color: var(--primary-text-color);
-
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-decoration: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--timing-function);
 }
 
 .site-nav .link:hover,
@@ -164,7 +191,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-decoration: none;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--timing-function);
 }
 
 .contact .link:hover,
@@ -363,7 +390,7 @@ body {
   height: 40px;
   border-radius: 50%;
   background-color: var(--accent-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--timing-function);
 }
 
 .social-list-icon {
@@ -396,11 +423,11 @@ body {
   color: var(--customers-border-color);
   border: 1px solid #8e8f99;
   border-radius: 4px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--timing-function);
 }
 .customers-list-icon {
   fill: var(--svg-icon-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--timing-function);
 }
 
 .customers-list-link:hover,
@@ -445,7 +472,7 @@ body {
   height: 40px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--timing-function);
 }
 
 .footer-social-list-link:hover,
@@ -476,7 +503,7 @@ body {
 
   text-decoration: none;
   text-transform: uppercase;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--timing-function);
 }
 
 .footer-logo:hover,
@@ -502,11 +529,11 @@ body {
   margin-bottom: 72px;
   gap: 24px;
   justify-content: center;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--timing-function);
 }
 
 .btn {
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--timing-function);
 }
 
 .filtr-btn .link:hover,
@@ -530,7 +557,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.04em;
   font-family: inherit;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--timing-function);
 }
 
 .visually-hidden {
@@ -581,7 +608,7 @@ body {
 
 .portfolio-link {
   display: block;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--timing-function);
 }
 
 .portfolio-link:hover,
@@ -600,6 +627,7 @@ body {
 }
 
 .overlay {
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -613,7 +641,7 @@ body {
   padding-bottom: 20px;
   padding-left: 10px;
   padding-right: 10px;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--timing-function);
 
   background-color: var(--accent-color);
 }
@@ -678,12 +706,12 @@ body {
 
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--timing-function),
+    border-color var(--timing-function);
 }
 
 .modal-close-btn-icon {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--timing-function);
 }
 
 .modal-close-btn:hover,
