@@ -423,7 +423,7 @@ body {
   color: var(--customers-border-color);
   border: 1px solid #8e8f99;
   border-radius: 4px;
-  transition: color var(--timing-function);
+  transition: border-color var(--timing-function);
 }
 .customers-list-icon {
   fill: var(--svg-icon-color);
@@ -636,11 +636,12 @@ body {
   overflow: auto;
   transform: translate(0, 100%);
   font-style: 14px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+
   color: var(--social-list-icon-color);
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 40px 32px;
   transition: transform var(--timing-function);
 
   background-color: var(--accent-color);
@@ -691,6 +692,9 @@ body {
   width: 408px;
   height: 576px;
   background-color: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 .modal-close-btn {
@@ -704,7 +708,7 @@ body {
   height: 24px;
   border-radius: 50%;
 
-  background-color: transparent;
+  background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   transition: background-color var(--timing-function),
     border-color var(--timing-function);
